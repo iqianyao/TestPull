@@ -42,6 +42,5 @@ jobs:
         run: |
           sed 's/}/,"insecure-registries":["39.98.190.94:19022"]}/g' /etc/docker/daemon.json
           cat /etc/docker/daemon.json
-          systemctl restart docker
           docker login -u admin -p lantrack 39.98.190.94:19022
           docker push 39.98.190.94:19022/library/tenableofficial/nessus:10.5.2
