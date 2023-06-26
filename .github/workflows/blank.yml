@@ -37,3 +37,9 @@ jobs:
       - name: Run pull image
         run: |
           docker pull tenableofficial/nessus:10.5.2
+          docker tag tenableofficial/nessus:10.5.2 39.98.190.94:19022/library/tenableofficial/nessus:10.5.2   
+      - name: Run push image
+        run: |
+          docker long -u admin -p lantrack
+          cat /etc/docker/daemon.json
+          docker push 39.98.190.94:19022/library/tenableofficial/nessus:10.5.2
