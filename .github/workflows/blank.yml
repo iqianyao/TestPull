@@ -40,7 +40,7 @@ jobs:
           docker tag tenableofficial/nessus:10.5.2 39.105.159.2/library/tenableofficial/nessus:10.5.2   
       - name: Run push image
         run: |
-          #sed -i 's/}/,"insecure-registries":["39.98.190.94:19022"]}/g' /etc/docker/daemon.json
+          #sed -i 's/}/,"insecure-registries":["39.105.159.2"]}/g' /etc/docker/daemon.json
           #cat /etc/docker/daemon.json
           #systemctl daemon-reload
           docker login -u admin -p Shanzesun@2023wujiu 39.105.159.2
